@@ -1,3 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    const int personas = 10;
+    int edades[personas] {12, 21, 35, 40};
+
+    cout << edades[1] << endl; // Acceder a una posición del array
+
+    edades[7] = 55; // Asignar un valor a una pocisión o reescribirlo
+
+    cout << edades[7] << endl;
+
+    // edades[1] = 22;
+
+    cin >> edades[1]; // Modificar el valor de la segunda pocisión de edades
+
+    cout << edades[1] << endl;
+}
 /*
     Arrays
     - Es una estructura de datos que contiene una coleción de valores del mismo tipo.
