@@ -14,9 +14,27 @@ int main()
 
     // edades[1] = 22;
 
-    cin >> edades[1]; // Modificar el valor de la segunda pocisión de edades
+    // cin >> edades[1]; // Modificar el valor de la segunda pocisión de edades
 
     cout << edades[1] << endl;
+
+    int mi_matriz [2][3] = {9, 2, 3, 4, 5, 6};
+
+    cout << mi_matriz[0][0] << endl; 
+
+    mi_matriz[0][0] = 1; // Remplazamos el valor de la posición 0-0
+
+    cout << mi_matriz[0][0] << endl;
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << "[" << mi_matriz[i][j] << "] ";
+        }
+        cout << endl;        
+    }
+    
 }
 /*
     Arrays
@@ -35,4 +53,21 @@ int main()
     int mi_matriz[] {15, 14, 23, 4}; [15][14][23][4]
 
     Se enumera las posiciones de los arrays desde 0 a n-1 donde n es el tamaño del array.
+
+    Arrays bidimensionales
+
+    int mi_matriz [4][5] = {15, 2, 4, ... 2};
+    int mi_matriz [4][5] = {
+        {15, 2, 4, 23, 4}
+        .
+        .        
+        {32, 4, 5, 6, 7}
+    }; Donde: 4 es el numero de filas y 5 son las columnas
+    Dicho de otra forma 4 es la canidad de arryas agrupados y 5 es la cantidad de valores de cada
+    array
+
+    Almacenar individualmente
+
+    mi_matriz [0][0] = 15;
+    mi_matriz [n][n] = ...
 */
