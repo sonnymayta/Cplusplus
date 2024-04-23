@@ -34,8 +34,31 @@ int main()
         }
         cout << endl;        
     }
+
+    // arrays multidimencionales
+
+    int pasoPersonas[24][30][12];
+
+    // Ingresar una cantidad en la fecha del 15 de mayo a las 2 de la madrugada
+
+    pasoPersonas[2][14][4] = 4;
+    cout << "El numero de personas que pasaron el 15 de mayo a las 2 AM son: " << pasoPersonas[2][14][4] << endl; 
+
+    for (int i = 0; i < 24; i++) // horas
+    {
+        for (int j = 0; j < 30; j++) // dias
+        {
+            for (int k = 0; k < 12; k++) // meses
+            {
+                pasoPersonas[i][j][k] = rand() % 1000;
+            }            
+        }        
+    }
+
+    cout << "El numero de personas que pasaron el 5 de diciembre a las 8 PM son: " << pasoPersonas[20][4][11] << endl;
     
 }
+
 /*
     Arrays
     - Es una estructura de datos que contiene una coleción de valores del mismo tipo.
