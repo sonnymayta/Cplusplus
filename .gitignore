@@ -33,3 +33,4 @@
 
 # VS Code files
 .vscode/tasks.json
+.vscode/c_cpp_properties.json

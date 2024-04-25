@@ -30,7 +30,20 @@ int main()
         cout << (i + 1) << " - " << salarioBase[i] << endl;
         i++;
     }   
-    
+
+    // Acceder a una posición del vector con el método "at"
+    cout << records.at(3) << endl;
+    records.at(3) = 7;
+    cout << records.at(3) << endl;
+
+    // Incerta un elemento en la ultima posición del vector usando "push_back"
+    records.push_back(22);
+   
+    for (int i = 0; i < records.size(); i++)
+    {
+        cout << records.at(i) << endl;
+    }   
+
 }
 
 /*
