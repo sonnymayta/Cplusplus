@@ -24,7 +24,24 @@ int main() {
     int w = y++;
     cout << "El valor de w es: " << w << endl;
     cout << "El valor de y es: " << y << endl;
-    return 0;
+
+    int m = 3; 
+    float n = 4.0f;
+    double o = 8.0;
+
+    auto resultado = m + n; // Deduce su tipo por el valor almacenado 
+
+    cout << typeid(resultado).name() << endl; // Imprime el tipo de dato
+
+    double media = (10 + 12.0 + 30) / 3;
+
+    /*
+        C++ no toma en cuenta el tipo de dato donde se almacenara el resultado. La operación 
+        seguira la regla de generar el tipo de dato del resultado en base al tipo de dato operado
+        que tenga mayor amplitud o precisión.
+    */
+    
+    cout << "La media de los 3 valores es: " << media << endl;
 }
 
 /*
@@ -37,4 +54,10 @@ int main() {
     - Lógicos
     - Nivel bit
 
+    Conversiones implicitas
+
+    El tipo de dato de resultado sera el tipo de dato más amplio o preciso de los operadores involucrados
+    en la operación.
+    
+    
 */
