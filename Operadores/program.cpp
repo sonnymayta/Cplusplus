@@ -42,6 +42,23 @@ int main() {
     */
     
     cout << "La media de los 3 valores es: " << media << endl;
+
+    // Condicionales
+
+    int edad;
+
+    cout << "Por favor, introduce tu edad: ";
+    cin >> edad;
+
+    if (edad < 18)
+    {
+        cout << "No tienes edad suficiente para sacar el carnet: " << endl;
+    }
+    else 
+    {
+        cout << "Tienes edad suficiente para sacar el carnet: " << endl;
+    }
+    
 }
 
 /*
@@ -50,8 +67,8 @@ int main() {
     Operadores
     - Asignación (=, +=, -=, *=, /=)
     - Aritméticos (+, -. *, /, %, a++, a--, ++a, --a)
-    - Comparación
-    - Lógicos
+    - Comparación (>, <, >=, <=, ==, !=)
+    - Lógicos (! (negación), && (Y lógico), ||(O lógico))
     - Nivel bit
 
     Conversiones implicitas
@@ -59,5 +76,7 @@ int main() {
     El tipo de dato de resultado sera el tipo de dato más amplio o preciso de los operadores involucrados
     en la operación.
     
-    
+    Condicional If
+
+    [Falso: flase / 0] IF [Verdadero: True / 1]
 */
