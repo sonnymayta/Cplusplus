@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+void toLowerCase(string &cadena) 
+{
+    for (int i = 0; i < cadena.length(); i++)
+    {
+        cadena[i] = tolower(cadena[i]);
+    }
+    
+} 
+
 int main() {
     // asignación
     int a = 5;
@@ -46,17 +55,23 @@ int main() {
     // Condicionales
 
     int edad;
+    string examen_medico;
 
     cout << "Por favor, introduce tu edad: ";
     cin >> edad;
 
-    if (edad < 18)
+    cout << "¿Has pasado el examen medico?: ";
+    cin >> examen_medico;
+
+    toLowerCase(examen_medico);
+
+    if (edad >= 18 && examen_medico == "si")
     {
-        cout << "No tienes edad suficiente para sacar el carnet: " << endl;
+        cout << "Cumples con los requisitos: " << endl;
     }
     else 
     {
-        cout << "Tienes edad suficiente para sacar el carnet: " << endl;
+        cout << "No cumples con los requisitos: " << endl;
     }
     
 }
@@ -79,4 +94,25 @@ int main() {
     Condicional If
 
     [Falso: flase / 0] IF [Verdadero: True / 1]
+*/
+
+/*
+    Convenciones en C++
+
+    En C++, no existe una regla estricta sobre si se debe utilizar camel case o underscore para nombrar
+    variables, funciones y clases. Depende en gran medida del estilo de codificación que prefieras y las 
+    convenciones adoptadas por tu equipo o proyecto. Ambos estilos son ampliamente utilizados en la comunidad de C++.
+
+    Sin embargo, algunas guías de estilo sugiere ciertas convenciones para facilitar la lectura y el mantenimiento
+    del código.
+
+    Guía de estilo de Google para C++
+    - Nombres de clases y estucturas en CamelCase con la primera letra en mayúsculas, como MiClase o MiEstructura.
+    - Nombres de funciones y métodos en CamelCase con la primera letra en minusculas, como miFuncion() o miMetodo().
+    - Nombres de variables en snakecase con todas las letras en minusculas y palabras separadas por underscores, como mi_variable.
+
+    Guía de estilo de C++ Core Guidelines:
+    - Nombres de clases y estructuras en CamelCase con la primera letra en mayúsculas, como MiClase o MiEstructura.
+    - Nombres de funciones y métodos en snake_case, como mi_funcion() o mi_metodo().
+    - Nombres de variables en snake_case, como mi_variable.
 */
