@@ -28,6 +28,67 @@ int main()
         cout << "Opción no valida" << endl;
         break;
     }
+
+    char idioma, categoria;
+    cout << "Menú de productos" << endl;
+    cout << "Selección de idioma\nE - Para Español\nI - Para Ingles" << endl;
+    cout << "Ingrese la letra de la opción requerida: ";
+    cin >> idioma; 
+
+    switch (idioma)
+    {
+    case 'E':
+    case 'e':
+        cout << "Seleccione la categoria\nL - Para libros\nR - para ropa\nT - Para tecnología" << endl;
+        cout << "Ingrese la letra de la opción requerida: ";
+        cin >> categoria;
+        switch (categoria)
+        {
+        case 'L':
+        case 'l':
+            cout << "Ha seleccionado la categoría libros" << endl;
+            break;
+        case 'R':
+        case 'r':
+            cout << "Ha seleccionado la categoría ropa" << endl;
+            break;
+        case 'T':
+        case 't':
+            cout << "Ha seleccionado la categoría tecnología" << endl;
+            break;
+        default:
+            cout << "Opción no valida" << endl;
+            break;
+        }
+        break;
+    case 'I':
+    case 'i':
+        cout << "Select the category\nB - For books\nC - For clothes\nT - For tecnology" << endl;
+        cout << "Enter the letter of the option required; ";
+        cin >> categoria;
+        switch (categoria)
+        {
+        case 'B':
+        case 'b':
+            cout << "You have selected the books category" << endl;
+            break;
+        case 'C':
+        case 'c':
+            cout << "You have selected the clothes category" << endl;
+            break;
+        case 'T':
+        case 't':
+            cout << "You have selected the tecnology category" << endl;
+            break;
+        default:
+            cout << "Invalid option" << endl;
+            break;
+        }
+        break;
+    default:
+        cout << "Opción no valida" << endl;
+        break;
+    }
 }
 
 /*
