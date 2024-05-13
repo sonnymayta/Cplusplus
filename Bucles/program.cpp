@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() 
@@ -19,6 +20,45 @@ int main()
         }   
         cout << endl;     
     }
+
+    // Bucle for-each
+
+    int edades [] {22, 23, 55, 41, 29};
+    
+    // for (auto a : array) -> auto usa la inferencia de tipos (determina el tipo de dato)
+    for (int e : edades)
+    {
+        cout << e << " ";
+    }
+
+    cout << endl;
+
+    string direccion = "www.google.com";
+
+    for (auto d : direccion) 
+    {
+        if (d == 'l')
+        {
+            cout << "Se encontro una l en el texto" << endl;
+        }        
+    }
+
+    vector<int> numeros;
+    int num;
+
+    cout << "Introduce varios números. Escribe 0 para salir" << endl;
+
+    while (cin >> num && num != 0)
+    {
+        numeros.push_back(num);
+    }
+
+    cout << "Has introducido los siguientes numeros" << endl;
+
+    for (int n : numeros)
+    {
+        cout << n << endl;
+    }
     
 }
 /*
@@ -37,4 +77,10 @@ int main()
     - Indeterminado: No sabemos hasta ejecutar el programa cuántas veces se ejecutará el código
     de su interior.
         - En C++ suelen ser bucles "while" y "do-while"
+
+    Bucle for-each
+
+    Utlizado para recorrer colecciones, como los arrays o los contenedores (vector, list, set,
+    map, etc)
+
 */
