@@ -60,6 +60,28 @@ int main()
         cout << n << endl;
     }
     
+    // Bucle while
+
+    int i {1};
+
+    while (i <= 10)
+    {
+        if (i % 2 == 0)
+        {
+            cout << i << " es par" << endl;
+        }     
+        i++;   
+    }  
+
+    int valor, suma = 0;
+
+    cout << "\nIntroduce varios numeros. Escribe 0 para salir" << endl;
+    while (cin >> valor && valor != 0)
+    {
+        suma = suma + valor;
+    }
+    
+    cout << "La suma de los numeros es: " << suma << endl;
 }
 /*
     Bucles
@@ -78,9 +100,12 @@ int main()
     de su interior.
         - En C++ suelen ser bucles "while" y "do-while"
 
-    Bucle for-each
-
+    Bucle for-each:
     Utlizado para recorrer colecciones, como los arrays o los contenedores (vector, list, set,
     map, etc)
+
+    Bucle while:
+    Utilizado cuando necesitas realizar una operación un número indeterminado de veces y la condición
+    de parada depende de algún cálculo o entrada del usuario que ocurre dentro del bucle.
 
 */
