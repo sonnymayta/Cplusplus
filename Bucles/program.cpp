@@ -82,6 +82,18 @@ int main()
     }
     
     cout << "La suma de los numeros es: " << suma << endl;
+
+    // Bucle do-while
+
+    int opcion;
+
+    do
+    {
+        cout << "Menú de opciones\n1. Opción 1\n2. Opción 2\n3. Salir" << endl;
+        cin >> opcion;
+        if(opcion != 3) cout << "Has elegido la opción " << opcion << endl;
+    } while (opcion != 3);
+    
 }
 /*
     Bucles
@@ -108,4 +120,8 @@ int main()
     Utilizado cuando necesitas realizar una operación un número indeterminado de veces y la condición
     de parada depende de algún cálculo o entrada del usuario que ocurre dentro del bucle.
 
+    Bucle do-while:
+    Utilizado cuando necesitas realizar una operación un número indeterminado de veces y la condición
+    de parada depende de algún cálculo o entrada del usuario que ocurre dentro del bucle.
+    Pero además necesitas que el cuerpo del bucle se ejecute al menos una vez.
 */
