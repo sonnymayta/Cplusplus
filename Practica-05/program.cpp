@@ -1,9 +1,16 @@
 #include <iostream>
+#include <cstdlib> // para rand() y srand()
+#include <ctime> // para time()
 using namespace std;
 
 int aleatorio() 
 {
-    return rand() % 100;
+    /* 
+        time() devolvera el tiempo actual y lo enviara como parametro a srand() 
+        y por ende srand() generara diferentes semillas a lo largo del timepo
+    */
+    srand(time(nullptr)); 
+    return rand() % 100 + 1; // numero aleatorio de 1 - 100
 }
 
 int main()
@@ -49,7 +56,7 @@ int main()
 
                 if (intento == 6 && numero != numero_aleatorio)
                 {
-                    cout << "Has excedido el numero maximo de intentos. Mejor suerte para la proxima." << endl;
+                    cout << "Has excedido el numero maximo de intentos. Mejor suerte para la proxima. " << numero_aleatorio << endl;
                 }            
             }
             break;
