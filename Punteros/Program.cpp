@@ -1,3 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int valor = 15;
+
+void modificarValor(int * valor)
+{
+    * valor = * valor + 10;
+}
+
+int main()
+{
+    int var = 10;
+
+    // Declaración de un puntero
+    int * ptr;
+
+    ptr = &var;
+
+    cout << var << endl; // Imprimier el valor de var
+
+    cout << &var << endl; // Imprimir la dirección en la memoria de var
+
+    cout << ptr << endl; // Imprimir la dirección almacenanda en el puntero ptr
+
+    cout << *ptr << endl; // Imprimir el valor apuntado por el puntero
+
+    *ptr = 55;
+
+    cout << var << endl; // Modifico el valor de var desde su puntero
+
+    // Puntero con funciones
+
+    modificarValor(&valor);
+    
+    cout << valor << endl;
+}
+
 /*
     PUNTEROS
 
