@@ -34,6 +34,30 @@ int main()
     modificarValor(&valor);
     
     cout << valor << endl;
+
+    // Gestión de memoria
+
+    int * int_ptr{nullptr}; // Una buena practica si se inicializa un puntero sin declararlo
+
+    int_ptr = new int; // con "new" asignamos un espacio de memoria en el heap. Mientras que el puntero se almacena en el stack
+
+    cout << int_ptr << endl; // imprime la dirección en memoria que se encuentra en el heap
+
+    cout << &int_ptr << endl; // imprime la dirección en el stack del puntero
+
+    // Ejemplo de liberación de memoria
+
+    int * int_puntero = new int;
+
+    * int_puntero = 10;
+
+    cout << "Valor antes de delete: " << * int_puntero << endl;
+
+    delete int_puntero; // Liberando espacio en la memoria
+
+    cout << int_puntero << endl;
+
+    int_puntero = nullptr; // Aplicando buenas practicas
 }
 
 /*
@@ -66,4 +90,12 @@ int main()
     - Interacción con hardware a bajo nivel    - Menor preocupación por fallos de memoria
     - Paso de parámetros por referencia
     - Compatibilidad con C
+
+    Memoria
+    [segmento de código] [segmento de datos] [stack (pila)] [heap (montón)]
+
+    *stackoverflow: es conocido cuando la pila es sobrepasada.
+
+    La memoria stack es de tipo LIFO (Last In First Out) y es gestionada automaticamente.
+    La memoria heap la gestiona el programador.
 */
