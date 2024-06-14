@@ -1,9 +1,34 @@
 #include <iostream>
 using namespace std;
 
+void intercambio(int &a, int &b)
+{
+    int temporal = a;
+    a = b;
+    b = temporal;
+}
+
+void incrementarSiNoNulo(int *valor)
+{
+    if (valor != nullptr) ++(*valor);
+}
+
 int main()
 {
+    int var1 = 10;
+    int var2 = 20;
 
+    cout << "Antes del intercambio: var1 = " << var1 << " y var2 = " << var2 << endl;
+
+    intercambio(var1, var2);
+
+    cout << "Despues del intercambio: var1 = " << var1 << " y var2 = " << var2 << endl;
+
+    int *a = nullptr;
+
+    incrementarSiNoNulo(a);
+
+    cout << "Valor de a: " << a << endl;
 }
 
 /*
