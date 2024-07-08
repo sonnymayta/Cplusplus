@@ -1,9 +1,31 @@
 #include <iostream>
 using namespace std;
 
+class Coche 
+{
+    // Atributos o propiedades
+    string modelo;
+    int cilindro;
+    int potencia;
+    string color;
+    double precio;
+
+    // Métodos o comportamientos
+    void arrancar()
+    {
+        cout << "El coche esta arrancando" << endl;
+    }
+
+    void frenar()
+    {
+        cout << "El coche esta frenando" << endl;
+    }
+};
+
 int main()
 {
-
+    Coche coche_a;
+    Coche coche_b;
 }
 
 /*
@@ -22,10 +44,17 @@ int main()
 
     Terminos en POO
     - Clase
-    - Objeto
+    - Objeto / instancia
     - Ejemplar de clase, instancia de clase, ejemplarizar una clase, instanciar una clase
     - Modularización
     - Encapsulamiento / encapsulación
     - Herencia
     - Polimorfismo
+
+    Clase
+    Una clase es una plantilla para crear objetos. Define un conjunto de atributos y métodos 
+    que los objetos creados a partir de la clase tendran.
+
+    Objeto
+    Un objeto tiene propiedades (atributos) y comportamientos (¿Que es capaz de hacer?)
 */

@@ -34,3 +34,4 @@
 # VS Code files
 .vscode/tasks.json
 .vscode/settings.json
+.vscode/launch.json
