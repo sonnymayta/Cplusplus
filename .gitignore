@@ -35,3 +35,8 @@
 .vscode/tasks.json
 .vscode/settings.json
 .vscode/launch.json
+
+# Witout extension
+*
+!*.*
+program
